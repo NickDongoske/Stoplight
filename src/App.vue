@@ -1,17 +1,27 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>Stoplight</h1>
+  <GoogleMap
+  api-key="AIzaSyD2pMQXi-9tZwWDVv0oTGkiRC0R2Se94oE"
+  style="width: 100%; height: 500px"
+  :center="center"
+  :zoom="15"
+  >
+    <Marker :options="{ position: center }" />
+  </GoogleMap>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { defineComponent } from 'vue'
+import { GoogleMap, Marker } from 'vue3-google-map'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+export default defineComponent({
+  components: { GoogleMap, Marker },
+  setup() {
+    const center = { lat: 39.7392, lng: -104.9903 }
+
+    return { center }
+  },
+})
 </script>
 
 <style>
