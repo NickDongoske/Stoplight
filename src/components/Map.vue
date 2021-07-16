@@ -3,6 +3,7 @@
     <h1>{{ msg }}</h1>
   </div>
   <div id="map" ref="map"></div>
+
 </template>
 
 <script>
