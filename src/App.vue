@@ -4,18 +4,20 @@
   api-key="AIzaSyD2pMQXi-9tZwWDVv0oTGkiRC0R2Se94oE"
   style="width: 100%; height: 500px"
   :center="center"
-  :zoom="15"
+  :zoom="12"
   >
-    <Marker :options="{ position: center }" />
+  
   </GoogleMap>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
-import { GoogleMap, Marker } from 'vue3-google-map'
+import { GoogleMap,  } from 'vue3-google-map'
+// import { Map } from '@/components/Map.vue'
 
 export default defineComponent({
-  components: { GoogleMap, Marker },
+  components: { GoogleMap },
+  
   setup() {
     const center = { lat: 39.7392, lng: -104.9903 }
 
