@@ -13,9 +13,11 @@
 <script>
 import { defineComponent } from 'vue'
 import { GoogleMap,  } from 'vue3-google-map'
+// import { Map } from '@/components/Map.vue'
 
 export default defineComponent({
   components: { GoogleMap },
+  
   setup() {
     const center = { lat: 39.7392, lng: -104.9903 }
 
